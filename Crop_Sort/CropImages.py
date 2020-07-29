@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 
 # Gets all of the images from a folder and stores it in matfiles. 
 # Make sure to change these when selecting a new folder with images to crop 
-direc = '/home/jeff/Documents/Ultrascan/Training_Images/'
-direc_to_images = direc + '/Training_Images/'
+direc = '/home/jeff/Documents/Ultrascan/Training_Images/TS2_Data/'
+direc_to_images = direc + '/Images/'
 direc_to_cropped_images = direc + '/Cropped_Images/'
 
 # Create cropped images folder
@@ -31,10 +31,10 @@ for i in range(nfiles):
     crop_img = img[0: 640, 0: 800]
     
     if (img_number < 10):
-        cv2.imwrite(direc_to_cropped_images + 'image_000' + str(img_number) + '.bmp', crop_img)
+        cv2.imwrite(direc_to_cropped_images + 'image_000' + str(img_number) + '.png', crop_img)
     elif (img_number < 100):
-        cv2.imwrite(direc_to_cropped_images + 'image_00' + str(img_number) + '.bmp', crop_img)
+        cv2.imwrite(direc_to_cropped_images + 'image_00' + str(img_number) + '.png', crop_img)
     elif (img_number < 1000):
-        cv2.imwrite(direc_to_cropped_images + 'image_0' + str(img_number) + '.bmp', crop_img)
+        cv2.imwrite(direc_to_cropped_images + 'image_0' + str(img_number) + '.png', crop_img)
     elif (img_number < 10000):
-        cv2.imwrite(direc_to_cropped_images + 'image_' + str(img_number) + '.bmp', crop_img)
+        cv2.imwrite(direc_to_cropped_images + 'image_' + str(img_number) + '.png', crop_img)
